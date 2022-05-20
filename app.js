@@ -174,7 +174,21 @@ function listChinafoods() {
 
 
 
+// Arama filtresi eklendi.
 
+EkleDOM.addEventListener("click",listSearchFoods)
+
+function listSearchFoods() {
+  let AllMenu = ""
+  menu.map((x) => {
+    if(AraDOM.value == x.title) {
+      AllMenu += createFood(x)
+    }
+  })
+  menuContainerDOM.innerHTML=AllMenu
+}
+
+// Arama filtresi eklendi.
 
 
 
